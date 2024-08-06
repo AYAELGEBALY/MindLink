@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+		"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<constant name="struts.action.excludePattern" value="/TestQuestionServlet/*" />
+
+	<package name="com.example" extends="struts-default">
+		<action name="loginAction" class="com.example.LoginAction">
+			<result name="success">/html_files/userInfo.jsp</result>
+			<result name="input">/html_files/login.jsp</result>
+		</action>
+
+		<action name="insertResult" class="com.example.InsertResultAction" method="execute">
+			<result name="success">/success.jsp</result>
+			<result name="failure">/failure.jsp</result>
+		</action>
+
+		<action name="testDepression" class="com.example.TestDepressionAction" method="execute">
+			<result name="success">/success.jsp</result>
+			<result name="failure">/failure.jsp</result>
+		</action>
+
+		<action name="signupAction" class="com.example.SignupAction">
+			<result name="success" type="redirect">./html_files/success.jsp</result>
+			<result name="input">./html_files/sign_up.jsp</result>
+		</action>
+
+
+
+	</package>
+</struts>

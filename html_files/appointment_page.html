@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindLink - Appointment Page</title>
+    <link rel="stylesheet" href="../css/combined_styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../img/Mental_Health_Support_Logo.png" alt="Mental Health Support Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./about_page.html">About Us</a></li>
+            <li><a href="./psyc_list.html">Therapists List</a></li>
+            <li><a href="./tests_page.html">Psychometer</a></li>
+            <li><a href="./matching.html">Find A Therapist</a></li>
+            <li><a href="./resources_page.html">Blog</a></li>
+        </ul>
+    </nav>
+    <div class="auth-buttons">
+        <button class="auth-button"><a href="./login.html">Login</a></button>
+        <button id="signupButton" class="auth-button"><a href="./sign_up.html">Sign Up</a></button>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button type="button">Search</button>
+    </div>
+</header>
+
+<div class="container">
+    <div class="main-content">
+        <div class="appointment-section">
+            <h2>Schedule an Appointment</h2>
+            <form id="appointment-form">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="date">Select Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Select Time</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="therapist">Select Therapist</label>
+                <select id="therapist" name="therapist" required>
+                    <option value="" disabled selected>Select a therapist</option>
+                    <option>Dr. Jane Doe - Psychologist</option>
+                    <option>Dr. John Smith - Psychiatrist</option>
+                    <option>Dr. Alice Brown - Therapist</option>
+                </select>
+
+                <label for="type">Type of Appointment</label>
+                <select id="type" name="type" required>
+                    <option value="" disabled selected>Select appointment type</option>
+                    <option>Initial Consultation</option>
+                    <option>Follow-up</option>
+                    <option>Therapy Session</option>
+                </select>
+
+                <label for="mode">Mode of Appointment</label>
+                <select id="mode" name="mode" required>
+                    <option value="" disabled selected>Select mode of appointment</option>
+                    <option>Video Call</option>
+                    <option>Voice Call</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="appointments-list">
+            <h2>Upcoming Appointments</h2>
+            <div class="appointment-item">
+                <div>
+                    <strong>Dr. Jane Doe</strong><br>
+                    May 25, 2024, 10:00 AM<br>
+                    Therapy Session (Video Call)
+                </div>
+                <div>
+                    <button class="reschedule-button">Reschedule</button>
+                    <button class="cancel-button">Cancel</button>
+                </div>
+            </div>
+
+            <div class="appointment-item">
+                <div>
+                    <strong>Dr. John Smith</strong><br>
+                    May 27, 2024, 2:00 PM<br>
+                    Follow-up (Voice Call)
+                </div>
+                <div>
+                    <button class="reschedule-button">Reschedule</button>
+                    <button class="cancel-button">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p><a href="#" class="footer-link">Privacy Policy</a> | <a href="#" class="footer-link">Terms of Service</a></p>
+    <p>Contact: info@mentalhealthapp.com | Follow us on social media</p>
+</footer>
+
+</body>
+</html>

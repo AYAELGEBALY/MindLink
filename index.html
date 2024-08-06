@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Check</title>
+    <link rel="stylesheet" href="./css/combined_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="./img/Mental_Health_Support_Logo.png" alt="Mental Health Support Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./html_files/about_page.html">About Us</a></li>
+            <li><a href="./html_files/psyc_list.html">Therapists List</a></li>
+            <li><a href="./html_files/tests_page.html">Psychometer</a></li>
+            <li><a href="./html_files/matching.html">Find A Therapist</a></li>
+            <li><a href="./html_files/resources_page.html">Blog</a></li>
+        </ul>
+    </nav>
+    <div class="auth-buttons">
+        <button id="LoginButton" class="auth-button"><a href="./html_files/log_in.jsp">Log-in</a></button>
+        <button id="signupButton" class="auth-button"><a href="./html_files/sign_up.jsp">Sign Up</a></button>
+
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button type="button">Search</button>
+    </div>
+</header>
+<main>
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>MIND MELTDOWN? WE'VE GOT YOU!</h1>
+            <p>Speak to a therapist online, anytime, before things get wild!</p>
+            <p>MindLink: The go-to platform for multilingual, confidential online therapy.</p>
+            <div class="buttons">
+                <button id="psychometerButton" class="action-button primary-button"><i class="fas fa-vial"></i><a href="./html_files/tests_page.html"> Psychometer</a></button>
+                <button id="therapistButton" class="action-button secondary-button"><i class="fas fa-user-md"></i> <a href="./html_files/matching.html">Get Matched With A Therapist</a></button>
+            </div>
+        </div>
+    </section>
+    <section class="bottom-sections">
+        <div class="bottom-section">
+            <h3><i class="fas fa-user-md"></i> We Connect You With Licensed Therapists</h3>
+            <p>Select the specialty that fits your need.</p>
+            <div class="specialty-buttons">
+                <button class="specialty-button" onclick="redirectToTest('depression')">
+                    <i class="fas fa-smile"></i> Depression
+                </button>
+                <button class="specialty-button" onclick="redirectToTest('mood_disorder')">
+                    <i class="fas fa-meh"></i> Mood Disorder
+                </button>
+                <button class="specialty-button" onclick="redirectToTest('anxiety')">
+                    <i class="fas fa-frown"></i> Anxiety Disorder
+                </button>
+                <button class="specialty-button" onclick="redirectToTest('ocd')">
+                    <i class="fas fa-sync-alt"></i> OCD
+                </button>
+                <button class="specialty-button" onclick="redirectToTest('addiction')">
+                    <i class="fas fa-syringe"></i> Addiction
+                </button>
+                <button class="specialty-button" onclick="redirectToTest('eating_disorder')">
+                    <i class="fas fa-utensils"></i> Eating Disorder
+                </button>
+                <button class="specialty-button" onclick="redirectToTest('couple_therapy')">
+                    <i class="fas fa-users"></i> Couple Therapy
+                </button>
+                <button class="specialty-button" onclick="redirectToTest('others')">
+                    <i class="fas fa-ellipsis-h"></i> Others
+                </button>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <h3><i class="fas fa-info-circle"></i> How it Works</h3>
+            <div class="how-it-works">
+                <div class="step">
+                    <img src="./img/step1.png" alt="Step 1">
+                    <div class="step-text">
+                        <h4>1. Join our community</h4>
+                        <p>Begin your journey to wellness! Answer a few simple questions to find the perfect therapist match. You can also choose your own therapist from our team of experts!</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <img src="./img/step2.png" alt="Step 2">
+                    <div class="step-text">
+                        <h4>2. Schedule your session</h4>
+                        <p>Pick the date and time that works best for you, and easily book your session. We offer flexible payment options to suit your needs!</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <img src="./img/step3.png" alt="Step 3">
+                    <div class="step-text">
+                        <h4>3. Start your healing journey</h4>
+                        <p>Connect with your therapist through video, voice, or chat. Begin your path to better mental health and well-being with personalized support!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-section talk-now-section">
+            <h3><i class="fas fa-headset"></i> If You Need to Talk Now, We Are Here to Help You</h3>
+            <div class="talk-now">
+                <div class="online-doctors">
+                    <img src="./img/doctor1.jpg" alt="Doctor 1">
+                    <img src="./img/doctor2.jpg" alt="Doctor 2">
+                    <img src="./img/doctor3.jpg" alt="Doctor 3">
+                </div>
+                <div class="talk-now-text">
+                    <p><i class="fas fa-circle"></i> 3 therapists are ready to start now within 15 mins</p>
+                    <button class="action-button primary-button"><i class="fas fa-search"></i> Explore</button>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-section benefits-section">
+            <h3><i class="fas fa-check-circle"></i> Our Members Benefit From</h3>
+            <div class="benefits">
+                <div class="benefit">
+                    <img src="./img/step1.png" alt="Save time and effort">
+                    <h4>Save time and effort</h4>
+                    <p>Get your session online. No waiting lists, no transportation hassles.</p>
+                </div>
+                <div class="benefit">
+                    <img src="./img/step1.png" alt="Responsive team">
+                    <h4>Responsive team</h4>
+                    <p>Our support team is available to help you take your first step and answer non-clinical questions.</p>
+                </div>
+                <div class="benefit">
+                    <img src="./img/step1.png" alt="Variety of options">
+                    <h4>Variety of options</h4>
+                    <p>A large number of therapists in various specialties ready to help you with whatever you're facing.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <h3><i class="fas fa-users"></i> Meet Our Therapists</h3>
+            <div class="therapists">
+                <img src="img/therapist1.jpg" alt="Therapist 1">
+                <img src="./img/therapist2.jpg" alt="Therapist 2">
+                <img src="./img/therapist3.jpg" alt="Therapist 3">
+                <img src="./img/therapist4.jpg" alt="Therapist 4">
+                <img src="./img/therapist5.jpg" alt="Therapist 5">
+                <img src="./img/therapist6.jpg" alt="Therapist 6">
+                <img src="./img/therapist7.jpg" alt="Therapist 7">
+                <img src="./img/therapist8.jpg" alt="Therapist 8">
+                <img src="./img/therapist9.jpg" alt="Therapist 9">
+                <img src="./img/therapist9.jpg" alt="Therapist 10">
+                <img src="./img/therapist9.jpg" alt="Therapist 11">
+                <img src="img/therapist1.jpg" alt="Therapist 12">
+            </div>
+        </div>
+        <section class="support-section">
+            <div class="support-content">
+                <h2>Still need help?</h2>
+                <div class="support-text">
+                    <p>Our customer support team is always here to answer your non-clinical questions.</p>
+                    <p>Contact them anytime anywhere to get the desired help, use the button below or the blue circle on the bottom right side.</p>
+                    <div class="support-team">
+                        <img src="./img/support1.jpg" alt="Support 1">
+                        <img src="./img/support2.jpg" alt="Support 2">
+                        <img src="./img/support3.jpg" alt="Support 3">
+                    </div>
+                    <button class="action-button support-button">Chat with Support Team</button>
+                </div>
+                <div class="support-image">
+                    <img src="./img/support-image.png" alt="Support Image">
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
+<footer class="footer">
+    <p><a href="#" class="footer-link">Privacy Policy</a> | <a href="#" class="footer-link">Terms of Service</a></p>
+    <p>Contact: info@mindlink.com | Follow us on social media</p>
+</footer>
+<script src="./Js_files/scripts.js"></script>
+</body>
+</html>
